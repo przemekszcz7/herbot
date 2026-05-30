@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-serif: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  
+  --color-gold-light: #fff3ad;
+  --color-gold: #eed075;
+  --color-gold-dark: #cba342;
+  --color-gold-bright: #fcd535;
+  --color-dark-input: #141414;
+  --color-dark-card: #0e0e0e;
+  --color-dark-bg: #050505;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c;
+  border-radius: 9999px;
+  border: 1px solid rgba(238, 208, 117, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eed075;
+}
+
+/* Luxury Reveal on Scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Elegant Soft Floating Anim */
+@keyframes floatPremium {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(238, 208, 117, 0.1);
+  }
+}
+
+.animate-float-premium {
+  animation: floatPremium 6s ease-in-out infinite;
+}
+
+/* Golden subtle shine shimmer for text/borders */
+@keyframes goldShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-shine-text {
+  background: linear-gradient(
+    to right, 
+    #eed075 0%, 
+    #fff3ad 25%, 
+    #cba342 50%, 
+    #fff3ad 75%, 
+    #eed075 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShine 8s linear infinite;
+}
+
+/* Elegant backdrop blur card styling */
+.backdrop-blur-glass {
+  backdrop-filter: blur(20px);
+  background-color: rgba(5, 5, 5, 0.85);
+  border-bottom: 1px solid rgba(238, 208, 117, 0.08);
+}
+
+/* Premium radial reflection backlights */
+.gold-backlight {
+  position: relative;
+}
+.gold-backlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(238, 208, 117, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+

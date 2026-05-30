@@ -1,0 +1,6 @@
+{
+  "name": "Herbot Wynajem Nieruchomości",
+  "description": "Profesjonalne biuro nieruchomości w Holandii. Oferty wynajmu ekskluzywnych pokoi i domów nad rzeką Maas w Vlijmen oraz Wijk en Aalburg.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
